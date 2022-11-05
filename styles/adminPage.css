@@ -1,0 +1,147 @@
+body{
+    padding: 10px 140px;
+}
+img{
+    width: 30px;
+    height: 22px;
+
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 43px;
+}
+
+.logo-div{
+    display: flex;
+    gap: 11px;
+    align-items: center;
+}
+
+.logo-div>p{
+    color: rgba(137, 43, 226, 0.486);
+    background-color: rgba(137, 43, 226, 0.479);
+    width: 16px ;
+    height: 16px;
+    border-radius: 100%;
+}
+
+
+.logout{
+    background-color: var(--white);
+    color: var(--brand100);
+    border: 1px solid var(--brand100);
+    padding: 8px 45px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.departments-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 19px;
+}
+
+.departments-header>select{
+    background-color: var(--white);
+    border: 1px solid var(--black); 
+    border-radius: 15px;
+    padding: 3px 29px;
+    cursor: pointer;
+
+}
+
+.departments-header>button{
+    background-color: var(--brand100);
+    color: var(--white);
+    border: none;
+    padding: 8px 45px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.departments-list{
+    background-color: #f8f8f8;
+    padding: 34px 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    flex-wrap: wrap;
+    max-height: 55vh;
+    max-width: 100%;
+    overflow-y: scroll;
+
+}
+
+.department-card{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    background-color: var(--white);
+    padding: 18px 29px;
+    width: 40%;
+    border-bottom: 1px solid var(--brand100);
+    margin-right: 65px;
+}
+
+.card-description{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.card-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+.card-buttons>img{
+    cursor: pointer;
+}
+.users-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 19px;
+    margin-top: 70px;
+
+}
+
+.users-list{
+    background-color: #f8f8f8;
+    padding: 34px 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    flex-wrap: wrap;
+    max-height: 55vh;
+    max-width: 100%;
+    overflow-y: scroll
+}
+
+.users-card{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    background-color: var(--white);
+    padding: 18px 29px;
+    width: 40%;
+    max-width: 300px;
+    border-bottom: 1px solid var(--brand100);
+    margin-right: 65px;
+}
+
+.users-info{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.name{
+    font-weight: 700;
+    font-size: 18px;
+}

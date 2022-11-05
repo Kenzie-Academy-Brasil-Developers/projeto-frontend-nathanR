@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter
+}
+
+:root {
+  --brand100: #4200FF;
+  --white: #ffffff;
+  --black: #000000;
+  --alert100: #CE4646;
+  --sucess100: #4BA036;
+}
+
+li{
+  list-style: none;
+}
+
+body{
+  position: relative;
+}

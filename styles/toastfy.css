@@ -1,0 +1,31 @@
+.div-toasty-sucess{
+    background-color: var(--sucess100);
+    padding: 20px 36px;
+    color: var(--white);
+    border-radius: 16px;
+    font-weight: 700;
+    position: absolute;
+    top: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.425);
+    animation: toast 4000ms ease-in forwards;
+}
+
+.div-toasty-failed{
+    background-color: var(--alert100);
+    padding: 20px 36px;
+    color: var(--white);
+    border-radius: 16px;
+    font-weight: 700;
+    position: absolute;
+    top: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.425);
+    animation: toast 4000ms ease-in forwards;
+ }
+
+
+    @keyframes toast {
+        0% {right: 50%; top: -110px}
+        25% {right: 50%; top: 10px}
+        50% {right: 50%; top: 10px}
+        100% {right: 50%; top: -120px}
+    }
