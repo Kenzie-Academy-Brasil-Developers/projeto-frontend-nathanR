@@ -1,9 +1,9 @@
-import { getCompanies } from "./requests.js"
+import { getCompanies, register } from "./requests.js"
 
 
 
-function moveToLogin (){
-const button = document.querySelector(".login")
+function moveToLogin (classe){
+const button = document.querySelector(classe||".login")
 button.addEventListener("click", ()=>{
     window.location.replace("/pages/login.html")
 
@@ -11,8 +11,8 @@ button.addEventListener("click", ()=>{
 }
 moveToLogin()
 
-function moveToRegister(){
-    const button = document.querySelector(".register")
+function moveToRegister(classe){
+    const button = document.querySelector(classe||".register")
     button.addEventListener("click", ()=>{
         window.location.replace("/pages/cadastro.html")
     })
@@ -84,6 +84,38 @@ function renderCompanies (companies){
     });
 }
 
+
+function openMenu (){
+    const menu = document.querySelector(".sanduiche")
+    menu.addEventListener("click", () =>{
+      const body  =   document.querySelector("body")
+      const divCover = document.createElement("div")
+      const divModal = document.createElement("div")
+      const divButtons = document.createElement("div")
+      const register = document.createElement("button")
+      const login = document.createElement("button")
+
+      register.classList.add("register-modal")
+      login.classList.add("login-modal")
+      divButtons.classList.add("div-buttons-header")
+      divCover.classList.add("div-cover")  
+      divModal.classList.add("div-modal")
+      
+      register.innerText = "Register"
+      login.innerText = "login"
+
+      divButtons.append(register, login)
+      divModal.append(divButtons)
+      divCover.appendChild(divModal)
+      body.appendChild(divCover)
+
+      moveToRegister (".register-modal")
+      moveToLogin(".login-modal")
+      
+    } )
+  
+}
+openMenu()
 
 
 

@@ -1,15 +1,15 @@
 import { register } from "./requests.js"
 
-function moveToHome (){
-    const button = document.querySelector(".home")
+function moveToHome (classe){
+    const button = document.querySelector(classe || ".home")
     button.addEventListener("click", ()=>{
         window.location.replace("/pages/index.html")
     })
     }
     moveToHome()
     
-    function moveToLogin(){
-        const button = document.querySelector(".login")
+    function moveToLogin(classe){
+        const button = document.querySelector(classe || ".login")
         button.addEventListener("click", ()=>{
             window.location.replace("/pages/login.html")
         })
@@ -53,3 +53,37 @@ function moveToHome (){
     }
     
     getRegisterData()
+
+    function openMenu (){
+        const menu = document.querySelector(".sanduiche")
+        menu.addEventListener("click", () =>{
+          const body  =   document.querySelector("body")
+          const divCover = document.createElement("div")
+          const divModal = document.createElement("div")
+          const divButtons = document.createElement("div")
+          const home = document.createElement("button")
+          const login = document.createElement("button")
+
+          home.classList.add("home-modal")
+          login.classList.add("login-modal")
+          divButtons.classList.add("div-buttons-header")
+          divCover.classList.add("div-cover")  
+          divModal.classList.add("div-modal")
+          
+          home.innerText = "Home"
+          login.innerText = "login"
+
+          divButtons.append(home, login)
+          divModal.append(divButtons)
+          divCover.appendChild(divModal)
+          body.appendChild(divCover)
+
+          moveToHome (".home-modal")
+          moveToLogin(".login-modal")
+          
+        } )
+      
+    }
+    openMenu()
+
+ 

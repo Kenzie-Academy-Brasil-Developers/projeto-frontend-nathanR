@@ -1,4 +1,4 @@
-
+@media(min-width: 900px){ 
 header{
     padding: 25px 140px 25px;
     display: flex;
@@ -25,25 +25,17 @@ header{
     gap: 11px
 }
 
-.home{
-    background-color: var(--white);
-    color: var(--brand100);
-    border: 1px solid var(--brand100);
-    padding: 12px 45px;
-    font-weight: 700;
+.sanduiche{
+    display: none
 }
 
-
-.login{
-   background-color: var(--brand100);
-   color: var(--white);
-   border: none;
-   padding: 12px 45px;
-   font-weight: 700;
+.div-buttons-header{
+    display: none;
 }
 
 main {
     width: 100vw;
+    
 }
 
 main>img{
@@ -57,6 +49,7 @@ main>img{
     position: fixed;
     display: flex;
     align-items: center;
+    width: 500px;
     justify-content: center;
     top: 30%;
     left: 40%;
@@ -69,34 +62,4 @@ main>img{
     width: 25.62rem;
     height: 27.44rem;
 }
-.form>h1{
-    font-weight: 700;
-    font-size: 38px
-}
-.form>input{
-    font-weight: 400;
-    font-size: 18px;
-    padding: 17px 0px 13px 17px;
-    border: 1px solid rgba(0, 0, 0, 0.308);
-}
-
-.form>select{
-    padding: 17px 0px 13px 17px;
-    border: 1px solid rgba(0, 0, 0, 0.308);
-    font-weight: 400;
-    font-size: 18px;
-}
-.register{
-    background-color: var(--brand100);
-    color: var(--white);
-    border: none;
-    padding: 12px 45px;
-    font-weight: 700;
-}
-.go-back{
-    background-color: var(--white);
-    color: var(--brand100);
-    border: 1px solid var(--brand100);
-    padding: 12px 45px;
-    font-weight: 700;
 }

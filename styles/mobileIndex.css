@@ -1,13 +1,13 @@
-@media(min-width: 900px){ 
-
-body{
-    padding: 10px 140px;
+body{ 
+    padding: 14px;
 }
 header{
+    padding: 25px 14px 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 43px;
+    min-width: 380px;
+    margin-bottom: 20px;
 }
 
 .logo-div{
@@ -23,17 +23,17 @@ header{
     height: 16px;
     border-radius: 100%;
 }
+.logo-div>h1{
+    font-size: 24px;
+}
 
 .buttons-header{
     display: flex;
-    gap: 11px
+    gap: 11px;
+    display: none
 }
 
-.sanduiche{
-    display: none;
-}
-
-.login{
+.login, .login-modal{
 background-color: var(--white);
 color: var(--brand100);
 border: 1px solid var(--brand100);
@@ -42,7 +42,7 @@ font-weight: 700;
 }
 
 
-.register{
+.register, .register-modal{
    background-color: var(--brand100);
    color: var(--white);
    border: none;
@@ -59,7 +59,8 @@ main{
     width: 50%;
     height: 46rem;
     background-size: cover;
-    display: flex;
+    display: none;
+   
     
 }
 
@@ -69,7 +70,8 @@ max-width: 100%;
 }
 
 .companies-section{
-    width: 50%;
+    width: 100%;
+    min-width: 380px ;
 }
 
 .companies-filter{
@@ -91,11 +93,11 @@ max-width: 100%;
 .companies-list{
     background-color: #F8F8F8;
     display: flex;
-    height:46rem ;
-    flex-direction: column;
+    height: 26rem ;
+    flex-direction:row;
     gap: 22px;
     padding: 25px;
-    overflow-y: scroll;
+    overflow: scroll;
 }
 
 .company-card{
@@ -126,5 +128,26 @@ max-width: 100%;
 
 }
 
+.div-buttons-header{
+    display: flex;
+    gap: 11px;
 
 }
+
+.div-cover{
+    position: fixed;
+    top: 15px;
+    left: 35px;
+
+}
+
+.div-modal{
+    position: absolute;
+    top: 6vh;
+    left: 30vw;  
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+

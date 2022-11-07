@@ -1,15 +1,18 @@
-import { login } from "./requests.js"
+import { login, register } from "./requests.js"
 
-async function moveToHome (){
-    const button =  document.querySelector(".home")
+async function moveToHome (classe){
+    
+    const button =  document.querySelector(classe || ".home")
      button.addEventListener("click", ()=>{
+        
         window.location.replace("/pages/index.html")
+
     })
     }
      moveToHome()
     
-    function moveToRegister(){
-        const button = document.querySelector(".register")
+    function moveToRegister(classe){
+        const button = document.querySelector(classe || ".register")
         button.addEventListener("click", ()=>{
             window.location.replace("/pages/cadastro.html")
         })
@@ -49,4 +52,36 @@ async function moveToHome (){
 
     getLoginData()
     
-   
+    function openMenu (){
+        const menu = document.querySelector(".sanduiche")
+        menu.addEventListener("click", () =>{
+          const body  =   document.querySelector("body")
+          const divCover = document.createElement("div")
+          const divModal = document.createElement("div")
+          const divButtons = document.createElement("div")
+          const home = document.createElement("button")
+          const register = document.createElement("button")
+
+          home.classList.add("home-modal")
+          register.classList.add("register-modal")
+          divButtons.classList.add("div-buttons-header")
+          divCover.classList.add("div-cover")  
+          divModal.classList.add("div-modal")
+          
+
+          home.innerText = "Home"
+          register.innerText = "Cadastro"
+
+          divButtons.append(home, register)
+          divModal.append(divButtons)
+          divCover.appendChild(divModal)
+          body.appendChild(divCover)
+
+          moveToHome (".home-modal")
+          moveToRegister(".register-modal")
+
+        
+        } )
+      
+    }
+    openMenu()
